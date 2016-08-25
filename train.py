@@ -30,18 +30,18 @@ def load_data(args):
 
 # arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir',                   type=str,   default='data/tinyshakespeare')
+parser.add_argument('--data_dir',                   type=str,   default='data/seuss18')
 parser.add_argument('--checkpoint_dir',             type=str,   default='cv')
 parser.add_argument('--gpu',                        type=int,   default=-1)
-parser.add_argument('--rnn_size',                   type=int,   default=128)
+parser.add_argument('--rnn_size',                   type=int,   default=96)
 parser.add_argument('--learning_rate',              type=float, default=2e-3)
 parser.add_argument('--learning_rate_decay',        type=float, default=0.97)
 parser.add_argument('--learning_rate_decay_after',  type=int,   default=10)
 parser.add_argument('--decay_rate',                 type=float, default=0.95)
 parser.add_argument('--dropout',                    type=float, default=0.0)
-parser.add_argument('--seq_length',                 type=int,   default=50)
-parser.add_argument('--batchsize',                  type=int,   default=50)
-parser.add_argument('--epochs',                     type=int,   default=50)
+parser.add_argument('--seq_length',                 type=int,   default=10)
+parser.add_argument('--batchsize',                  type=int,   default=10)
+parser.add_argument('--epochs',                     type=int,   default=20)
 parser.add_argument('--grad_clip',                  type=int,   default=5)
 parser.add_argument('--init_from',                  type=str,   default='')
 
